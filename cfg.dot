@@ -1,0 +1,26 @@
+digraph G {
+139760936988560 [label="BB139760936988560{\n<class 'ir.StoreStat'>}"];
+139760936988560 -> 139760937033872 [label="set([int squ, 't5', 't2', int x])"];
+139760937033872 [label="BB139760937033872{\n[label label1]\n<class 'ir.BranchStat'>}"];
+139760937033872 -> 139760937033936 [label="set([int squ, int x, 't5', 't2'])"];
+139760937033872 -> 139760937034064 [style=dashed,label="set([int squ, 't5'])"];
+139760937033936 [label="BB139760937033936{\n<class 'ir.CallStat'>}"];
+139760937033936 -> 139760937034000 [label="set([int squ, 't5', 't2', int x])"];
+139760937034000 [label="BB139760937034000{\n<class 'ir.StoreStat'>\n<class 'ir.PrintStat'>\n<class 'ir.BranchStat'>}"];
+139760937034000 -> 139760937033872 [style=dashed,label="set([int squ, 't5', 't2', int x])"];
+139760937034064 [label="BB139760937034064{\n[label label2]\n<class 'ir.EmptyStat'>\n<class 'ir.AssignStat'>}"];
+139760937034064 -> 139760937034128 [label="set([int squ, 't5'])"];
+139760937034128 [label="BB139760937034128{\n[label label3]\n<class 'ir.BranchStat'>}"];
+139760937034128 -> 139760937034192 [label="set([int squ, 't5'])"];
+139760937034128 -> 139760936984912 [style=dashed,label="set([])"];
+139760937034192 [label="BB139760937034192{\n<class 'ir.PrintStat'>\n<class 'ir.StoreStat'>\n<class 'ir.BranchStat'>}"];
+139760937034192 -> 139760937034128 [style=dashed,label="set([int squ, 't5'])"];
+139760936984912 [label="BB139760936984912{\n[label label4]\n<class 'ir.EmptyStat'>}"];
+139760936984912 -> exit139760936499312 [label="set([])"];
+139760937034256 [label="BB139760937034256{\n<class 'ir.StoreStat'>}"];
+139760937034256 -> exit139760936984656 [label="set([int x, int squ])"];
+main [shape=box];
+main -> 139760936988560 [label="set([int squ, 't5', 't2', int x, 't1'])"];
+square [shape=box];
+square -> 139760937034256 [label="set([int x, 't8', int squ])"];
+}
